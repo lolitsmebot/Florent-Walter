@@ -55,114 +55,169 @@
             color: #f59e0b;
             font-weight: 600;
         }
+
+        /* Section Styling */
+        .section {
+            padding: 50px 0;
+            background-color: #f9fafb;
+        }
+
+        .section-header {
+            font-size: 2.5rem;
+            color: #3b82f6;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        /* Card Styling for Achievements */
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #3b82f6;
+            margin-bottom: 15px;
+        }
+
+        .card-content {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        /* Image Styling */
+        .image {
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            background-color: #1a202c;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #f59e0b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Grid */
+        @media (max-width: 768px) {
+            .grid-cols-3 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
 </head>
 
 <body class="bg-gray-50">
 
-    <div class="container py-16 px-6">
-        <header class="mb-16 text-center">
+    <div class="container">
+
+        <!-- Header Section -->
+        <header class="text-center py-16">
             <h1 class="text-5xl font-bold text-indigo-700 mb-4 fade-in">Florent Walter</h1>
-            <p class="text-lg text-gray-600 mb-4 fade-in">Un parcours tennistique exceptionnel - Joueur, Entraîneur, Leader</p>
+            <p class="text-lg text-gray-600 mb-8 fade-in">Le parcours remarquable d'un joueur et entraîneur exceptionnel</p>
             <div class="text-center mt-8 fade-in">
                 <img src="https://www.dna.fr/sports/2012/08/27/la-lecon-de-walter/florent-walter-realise-le-match-quasi-parfait-en-finale-face-a-araya-photo-dna-jf-badias.jpg"
-                    alt="Florent Walter" class="image-frame w-72 mx-auto border-4 border-indigo-700">
+                    alt="Florent Walter" class="image-frame w-72 mx-auto border-4 border-indigo-700 shadow-lg">
             </div>
         </header>
 
-        <!-- Section 1 : Informations Générales -->
-        <section class="bg-white shadow-lg rounded-2xl p-8 mb-12 custom-shadow fade-in">
-            <h2 class="section-title">Informations Générales</h2>
+        <!-- Informations Générales Section -->
+        <section class="section fade-in">
+            <h2 class="section-header">Informations Générales</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="font-semibold text-xl mb-4">Biographie</h3>
-                    <p class="text-lg text-gray-700">Florent Walter, né en 1978, est un joueur de tennis français, reconnu pour son engagement dans le tennis régional. Actuellement membre du TC Bischwiller, il a une carrière impressionnante en France et à l'international.</p>
+                <div class="card">
+                    <h3 class="card-title">Biographie</h3>
+                    <p class="card-content">Florent Walter est né en 1978 et est un joueur de tennis français reconnu. Sa carrière a débuté au niveau régional avant de s'imposer comme un joueur clé dans les tournois de niveau national. Aujourd'hui, il est également entraîneur au TC Bischwiller.</p>
                 </div>
-                <div>
-                    <h3 class="font-semibold text-xl mb-4">Détails du joueur</h3>
-                    <ul class="space-y-2 text-lg text-gray-700">
-                        <li><strong>Nationalité :</strong> Française</li>
+                <div class="card">
+                    <h3 class="card-title">Détails du joueur</h3>
+                    <ul class="card-content space-y-3">
+                        <li><strong>Nom :</strong> Florent Walter</li>
                         <li><strong>Date de naissance :</strong> 1978</li>
-                        <li><strong>Clubs précédents :</strong> TC Obernai, TC Strasbourg</li>
-                        <li><strong>Style de jeu :</strong> Droite, Revers à deux mains</li>
+                        <li><strong>Nationalité :</strong> Française</li>
+                        <li><strong>Style de jeu :</strong> Droitier, Revers à deux mains</li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="font-semibold text-xl mb-4">Parcours</h3>
-                    <ul class="space-y-2 text-lg text-gray-700">
-                        <li><strong>Joueur actif :</strong> Oui</li>
-                        <li><strong>Entraîneur :</strong> Depuis 2017 au TC Bischwiller</li>
-                        <li><strong>Matchs internationaux :</strong> Tournois en Corse, Liechtenstein</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 2 : Carrière - Achievements -->
-        <section class="bg-white shadow-lg rounded-2xl p-8 mb-12 custom-shadow fade-in">
-            <h2 class="section-title">Carrière et Réalisations</h2>
-            <p class="text-lg text-gray-700 mb-8">Florent Walter a accumulé de nombreux titres en compétition individuelle et par équipes. Ses performances dans des tournois de haut niveau sont dignes d'un joueur professionnel.</p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                    <h3 class="font-semibold text-xl mb-4">Performances en Tournois</h3>
-                    <ul class="list-disc pl-5 space-y-2 text-lg text-gray-700">
-                        <li><strong>2013 :</strong> Finaliste du tournoi de Grandvillars (face à Blandin)</li>
-                        <li><strong>2014 :</strong> Victoire au tournoi de Schiltigheim contre Araya</li>
-                        <li><strong>2017 :</strong> Vainqueur de plusieurs tournois régionaux en Alsace</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-xl mb-4">Exploits Internationaux</h3>
-                    <p class="text-lg text-gray-700 mb-4">Florent a également disputé des matchs contre des joueurs prestigieux tels que <strong>Dustin Brown</strong> et <strong>Pierre-Hugues Herbert</strong> lors de tournois internationaux.</p>
-                    <ul class="list-disc pl-5 space-y-2 text-lg text-gray-700">
-                        <li><strong>Match notable :</strong> Affrontement avec Dustin Brown à Roland-Garros, un match de grande intensité.</li>
-                        <li><strong>Participation :</strong> Tournois en Corse, Liechtenstein et plusieurs autres en Europe.</li>
+                <div class="card">
+                    <h3 class="card-title">Carrière</h3>
+                    <ul class="card-content space-y-3">
+                        <li><strong>Statut actuel :</strong> Joueur actif & Entraîneur</li>
+                        <li><strong>Clubs :</strong> TC Obernai, TC Strasbourg, TC Bischwiller</li>
+                        <li><strong>Tournois internationaux :</strong> Plusieurs compétitions en Europe (Corse, Liechtenstein, etc.)</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Section 3 : Carrière par Équipes -->
-        <section class="bg-white shadow-lg rounded-2xl p-8 mb-12 custom-shadow fade-in">
-            <h2 class="section-title">Carrière par Équipes</h2>
-            <p class="text-lg text-gray-700 mb-6">Florent a joué un rôle essentiel dans les équipes du TC Obernai, apportant des victoires cruciales qui ont permis à son équipe de gravir les échelons du tennis français.</p>
-
-            <ul class="list-disc pl-5 space-y-2 text-lg text-gray-700">
-                <li><strong>2013 - 2017 :</strong> Pilier de l’équipe d'Obernai en National B</li>
-                <li><strong>Victoire par équipe :</strong> Champion du tournoi régional en 2016 avec son équipe</li>
-                <li><strong>Rôle de capitaine :</strong> A conduit son équipe à la victoire en 2019, affichant une grande stratégie de groupe.</li>
-            </ul>
+        <!-- Achievements Section -->
+        <section class="section fade-in">
+            <h2 class="section-header">Palmarès et Réalisations</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <h3 class="card-title">Performances en Tournois</h3>
+                    <ul class="card-content space-y-2">
+                        <li><strong>2013 :</strong> Finaliste à Grandvillars contre Blandin.</li>
+                        <li><strong>2017 :</strong> Vainqueur à Schiltigheim contre Araya.</li>
+                        <li><strong>2019 :</strong> Champion du tournoi de Strasbourg, mettant en valeur sa constance.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Exploits Internationaux</h3>
+                    <p class="card-content">Florent a affronté plusieurs joueurs de renom sur les circuits internationaux. Parmi les matchs mémorables, il a joué contre <strong>Dustin Brown</strong> en Alsace et <strong>Pierre-Hugues Herbert</strong> à Dijon. Une anecdote amusante : Florent est arrivé en retard au tournoi de Dijon et pour s'excuser, il a offert à Pierre-Hugues une bouteille de vin !</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Performances Par Équipes</h3>
+                    <ul class="card-content space-y-2">
+                        <li><strong>2013-2017 :</strong> Leader de l’équipe du TC Obernai en National B.</li>
+                        <li><strong>2016 :</strong> A mené son équipe à la victoire du championnat régional.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <!-- Section 4 : Galerie Photos -->
-        <section class="bg-white shadow-lg rounded-2xl p-8 mb-12 custom-shadow fade-in">
-            <h2 class="section-title">Galerie Photos</h2>
+        <!-- Gallery Section -->
+        <section class="section fade-in">
+            <h2 class="section-header">Galerie Photos</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 <img src="https://www.dna.fr/sports/2012/08/27/la-lecon-de-walter/florent-walter-realise-le-match-quasi-parfait-en-finale-face-a-araya-photo-dna-jf-badias.jpg"
-                    class="w-full h-auto rounded-lg shadow-xl image-frame" alt="Florent Walter en action">
+                    alt="Florent Walter en action" class="image w-full h-auto rounded-lg shadow-xl">
                 <img src="https://www.dna.fr/sports/2019/02/09/le-privilege-de-l-age/florent-walter-0-bischwiller-et-wallis-vitis-2-6-tc-strasbourg-se-sont-imposes-a-l-experience-hier-en-finale-a-schiltigheim-photo-l-alsace-jean-marc-loos.jpg"
-                    class="w-full h-auto rounded-lg shadow-xl image-frame" alt="Florent Walter avec son équipe">
+                    alt="Florent Walter avec son équipe" class="image w-full h-auto rounded-lg shadow-xl">
                 <img src="https://www.instagram.com/p/CAndHqvKvNT/media/?size=l"
-                    class="w-full h-auto rounded-lg shadow-xl image-frame" alt="Florent Walter au TC Bischwiller">
+                    alt="Florent Walter au TC Bischwiller" class="image w-full h-auto rounded-lg shadow-xl">
             </div>
         </section>
 
-        <!-- Section 5 : Rôle d'Entraîneur -->
-        <section class="bg-white shadow-lg rounded-2xl p-8 mb-12 custom-shadow fade-in">
-            <h2 class="section-title">Rôle d'Entraîneur</h2>
-            <p class="text-lg text-gray-700 mb-6">Florent a également fait ses preuves en tant qu'entraîneur au TC Bischwiller, formant des jeunes talents et offrant des sessions de formation avancées.</p>
-
-            <ul class="list-disc pl-5 space-y-2 text-lg text-gray-700">
-                <li><strong>Coach principal :</strong> Entraîneur des équipes jeunes et adultes.</li>
-                <li><strong>Stages de formation :</strong> Organise des camps pour perfectionner les compétences techniques et tactiques des joueurs.</li>
-                <li><strong>Mentor :</strong> Aide les jeunes joueurs à développer leur mentalité compétitive.</li>
-            </ul>
-        </section>
-
-        <!-- Footer -->
-        <footer class="text-center text-sm text-gray-500 py-8 mt-16">
-            &copy; 2025 Florent Walter – Fiche réalisée à but informatif. Informations basées sur des sources publiques.
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>&copy; 2025 Florent Walter. Tous droits réservés.</p>
+            <p>Pour plus d'informations, visitez <a href="http://www.florentwalter.fr" target="_blank">florentwalter.fr</a></p>
         </footer>
 
     </div>
@@ -170,7 +225,6 @@
 </body>
 
 </html>
-
 
 
 
